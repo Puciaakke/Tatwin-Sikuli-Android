@@ -1,0 +1,156 @@
+package testcases3;
+
+import java.util.List;
+
+import org.sikuli.script.FindFailed;
+import org.sikuli.script.Key;
+import org.sikuli.script.Location;
+import org.sikuli.script.Match;
+import org.sikuli.script.Pattern;
+import org.sikuli.script.Screen;
+
+public class appDesktop {
+
+	static String PATH = "D:\\zajęcia zdalne\\TATWin\\ćw\\skiduli\\";
+	static Pattern START = new Pattern(PATH + "start.png");
+	static Pattern DISCORD = new Pattern(PATH + "discord.png");
+	static Pattern SETTING = new Pattern(PATH + "set.png");
+	static Pattern SETAPP = new Pattern (PATH + "jezyk.png");
+	static Pattern SETAPP1 = new Pattern (PATH + "jezyk1.png");
+	static Pattern UK = new Pattern (PATH + "uk.png");
+	static Pattern PL = new Pattern (PATH + "pl.png");
+	static Pattern ICON = new Pattern(PATH + "znak.png");
+	static Pattern ESC = new Pattern(PATH + "esc.png");
+	static Pattern ESC1 = new Pattern(PATH + "esc1.png");
+	static Pattern FRAME = new Pattern(PATH + "frame.png");
+	static Pattern NOWY = new Pattern(PATH + "nowy.png");
+	static Pattern ADD = new Pattern(PATH + "add.png");
+	static Pattern DELETE = new Pattern(PATH + "delete.png");
+	static Pattern UST = new Pattern(PATH + "ust.png");
+	static Pattern TATWIN = new Pattern(PATH + "tatwin.png");
+	static Pattern WYGLAD = new Pattern(PATH + "setapp.png");
+	static Pattern WYGLADB = new Pattern(PATH + "setapp1.png");
+	static Pattern TEXT = new Pattern(PATH + "text.png");
+	static Pattern SAVE = new Pattern(PATH + "save.png");
+	static Pattern CREATE = new Pattern(PATH + "create.png");
+	static Pattern DSC = new Pattern(PATH + "dsc.png");
+	static Pattern USUN = new Pattern(PATH + "usuwanie.png");
+	public static void main (String[] args) throws FindFailed, InterruptedException{
+		Screen scr = new Screen(0);
+		Screen scrm = new Screen(1);
+		Match start = scr.find(START.targetOffset(10,10));
+		scr.click(start);
+		scr.type("discord");
+		scr.type(Key.ENTER);
+		Thread.sleep(1000);
+		Match icon = scr.find(ICON.targetOffset(13,234));
+		scr.click(icon);
+		Match settings = scr.find(SETTING.targetOffset(1, 1));
+		scr.click(settings);
+		Thread.sleep(1000);
+		Match jezyk = scr.find(SETAPP.targetOffset(1,1));
+		scr.click(jezyk);
+		Thread.sleep(1000);
+		Match uk = scr.find(UK.targetOffset(1, 1));
+		scr.click(uk);
+		Thread.sleep(1000);
+		Match esc = scr.find(ESC.targetOffset(1,1));
+		scr.click(esc);
+		Thread.sleep(1000);
+		Match settings1 = scr.find(SETTING.targetOffset(1, 1));
+		scr.click(settings1);
+		Thread.sleep(1000);
+		Match jezyk1 = scr.find(SETAPP1.targetOffset(1,1));
+		scr.click(jezyk1);
+		Thread.sleep(1000);
+		Match pl = scr.find(PL.targetOffset(1, 1));
+		scr.click(pl);
+		Thread.sleep(1000);
+		Match esc1 = scr.find(ESC.targetOffset(1,1));
+		scr.click(esc1);
+		Thread.sleep(1000);
+		Match nowy = scr.find(FRAME.targetOffset(1, 1));
+		scr.click(nowy);
+		Thread.sleep(1000);
+		Match server = scr.find(NOWY.targetOffset(-2, 100));
+		scr.click(server);
+		for (int i=0; i<30; i++) {
+			scr.type(Key.BACKSPACE);
+		}
+		Thread.sleep(1000);
+		scr.type("TATWIN-ITO");
+		Match dodaj = scr.find(ADD.targetOffset(1, 1));
+		scr.click(dodaj);
+		Thread.sleep(1000);
+		Match iks = scr.find(ESC1.targetOffset(1,1));
+		scr.click(iks);
+		Thread.sleep(1000);
+		Match tat = scr.find(TEXT.targetOffset(-64,-36));
+		scr.rightClick(tat);
+		Thread.sleep(1000);
+		Match opcje = scr.find(UST.targetOffset(1,1));
+		scr.click(opcje);
+		Thread.sleep(1000);
+		Match del = scr.find(DELETE.targetOffset(-62,70));
+		scr.click(del);
+		Thread.sleep(500);
+		scr.type("TATWIN-ITO");
+		scr.type(Key.ENTER);
+		Thread.sleep(1000);
+		Match settings2 = scr.find(SETTING.targetOffset(1, 1));
+		scr.click(settings2);
+		Thread.sleep(1000);
+		Match wyglad = scr.find(WYGLAD.targetOffset(-46, 236));
+		scr.click(wyglad);
+		Thread.sleep(1000);
+		Match wyglad1 = scr.find(WYGLAD.targetOffset(220, -15));
+		scr.click(wyglad1);
+		Thread.sleep(1000);
+		Match wyglad2 = scr.find(WYGLADB.targetOffset(237, -65));
+		scr.click(wyglad2);
+		Thread.sleep(1000);
+		Match wygladexit = scr.find(WYGLAD.targetOffset(884, -354));
+		scr.click(wygladexit);
+		Thread.sleep(1000);
+		Match text = scr.find(DSC.targetOffset(1,259));
+		scr.click(text);
+		Thread.sleep(500);
+		Match text1 = scr.find(TEXT.targetOffset(189,-4).similar(0.9));
+		scr.click(text1);
+		Thread.sleep(1000);
+		for (int i=0; i<30; i++) {
+			scr.type(Key.BACKSPACE);
+		}
+		Thread.sleep(1000);
+		scr.type("Tekstowy");
+		Match save = scr.find(SAVE.targetOffset(1,1));
+		scr.click(save);
+		Match textexit = scr.find(ESC.targetOffset(1,1));
+		scr.click(textexit);
+		Thread.sleep(1000);
+		Match nowychan = scr.find(TEXT.targetOffset(188,41));
+		scr.click(nowychan);
+		Thread.sleep(1000);
+		Match nowychan1 = scr.find(CREATE.targetOffset(-303,-169));
+		scr.click(nowychan1);
+		Thread.sleep(1000);
+		Match nowychan2 = scr.find(CREATE.targetOffset(-302,-81));
+		scr.click(nowychan2);
+		Thread.sleep(1000);
+		scr.type("TESTOWY");
+		Thread.sleep(1000);
+		Match nowychan3 = scr.find(CREATE.targetOffset(1,1));
+		scr.click(nowychan3);
+		Thread.sleep(1000);
+		Match usunchan = scr.find(FRAME.targetOffset(100,156));
+		scr.rightClick(usunchan);
+		Thread.sleep(1000);
+		Match usunchan1 = scr.find(FRAME.targetOffset(173,348));
+		scr.click(usunchan1);
+		Thread.sleep(1000);
+		Match usunchan2 = scr.find(USUN.targetOffset(173,348));
+		scr.click(usunchan2);
+	}
+	
+	
+}
